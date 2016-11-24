@@ -32,12 +32,12 @@ Comming soon
     }
     ```
 
-3. Register module (in MainActivity.java)
+3. Register module (in MainApplication.java)
 
     ```
     import com.aotasoft.rngooglelogin.GoogleLoginPackage;  // <--- import
 
-    public class MainActivity extends ReactActivity {
+    public class MainApplication extends Application implements ReactApplication {
       ......
 
       @Override
@@ -53,5 +53,15 @@ Comming soon
       ......
 
     }
+    ```
+    4. Add Server Api Key to get token (optional)
+    in strings.xml add: 
+    ```
+    <string name="rn_google_server_key">xxxxxxxxx.apps.googleusercontent.com</string>
+    ```
+    in manifest.xml add: 
+    ```
+    <meta-data android:name="rn_google_server_key" android:value="@string/rn_google_server_key" />
+
     ```
 
