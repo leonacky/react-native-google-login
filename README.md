@@ -6,7 +6,7 @@ Support google login without google-services.json file config.
 
 - Run in your project:
 ```sh
-$ npm i -S https://github.com/leonacky/react-native-socketio.git
+$ npm i -S https://github.com/leonacky/react-native-google-login.git
 ```
 
 #### iOS
