@@ -7,5 +7,5 @@ const GoogleLoginManager = NativeModules.RNGoogleLoginModule;
 
 
 module.exports =  {
-  FBLoginManager
+  GoogleLoginManager
 };
