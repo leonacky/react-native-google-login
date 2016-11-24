@@ -54,7 +54,7 @@ Comming soon
 
     }
     ```
-    4. Add Server Api Key to get token (optional)
+4. Add Server Api Key to get token (optional)
     in strings.xml add: 
     ```
     <string name="rn_google_server_key">xxxxxxxxx.apps.googleusercontent.com</string>
