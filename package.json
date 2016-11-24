@@ -1,0 +1,25 @@
+{
+  "name": "react-native-google-login",
+  "version": "3.1.1",
+  "description": "Google login without google-services.json",
+  "license": "MIT",
+  "main": "index.js",
+  "author": {
+    "name": "Tuan Dinh",
+    "email": "leonacky@gmail.com",
+    "url": "http://aotasoft.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leonacky/react-native-google-login.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "react-component",
+    "android",
+    "google",
+    "login",
+    "signin",
+  ]
+}
