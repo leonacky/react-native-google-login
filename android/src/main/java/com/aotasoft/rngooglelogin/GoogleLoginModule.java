@@ -168,4 +168,8 @@ public class GoogleLoginModule extends ReactContextBaseJavaModule implements Act
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
+    
+    public void onNewIntent(Intent intent) {
+
+    }
 }
