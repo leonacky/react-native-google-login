@@ -2,6 +2,20 @@
 
 Support google login without google-services.json file config.
 
+### Usage
+```
+var {GoogleLoginManager} = require('react-native-google-login');
+
+GoogleLoginManager.login(function(error, data){
+  if (!error) {
+    console.log("Login data: ", data);
+  } else {
+    console.log("Error: ", error);
+  }
+})
+```
+
+
 ### Install
 
 - Run in your project:
