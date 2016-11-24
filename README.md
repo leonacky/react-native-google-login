@@ -18,8 +18,8 @@ Comming soon
 
     ```
     ...
-    include ':rngooglelogin'
-    project(':rngooglelogin').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-google-login/android')
+    include ':react-native-google-login'
+    project(':react-native-google-login').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-google-login/android')
     ```
 
 2. In `android/app/build.gradle`
@@ -28,7 +28,7 @@ Comming soon
     ...
     dependencies {
         ...
-        compile project(':rngooglelogin')
+        compile project(':react-native-google-login')
     }
     ```
 
