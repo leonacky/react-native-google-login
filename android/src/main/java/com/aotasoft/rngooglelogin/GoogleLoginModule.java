@@ -120,6 +120,10 @@ public class GoogleLoginModule extends ReactContextBaseJavaModule implements Act
         }
     }
 
+    public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
+        onActivityResult(requestCode, resultCode, data);
+    }
+
     public void onActivityResult(
             final int requestCode,
             final int resultCode,
