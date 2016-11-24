@@ -55,11 +55,15 @@ Comming soon
     }
     ```
 4. Add Server Api Key to get token (optional)
+
     in strings.xml add: 
+    
     ```
     <string name="rn_google_server_key">xxxxxxxxx.apps.googleusercontent.com</string>
     ```
+    
     in manifest.xml add: 
+    
     ```
     <meta-data android:name="rn_google_server_key" android:value="@string/rn_google_server_key" />
 
