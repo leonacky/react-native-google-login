@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 #import <GoogleSignIn/GoogleSignIn.h>
 
-@interface RNGoogleLogin : NSObject<RCTBridgeModule, GIDSignInDelegate, GIDSignInUIDelegate>
+@interface RNGoogleLogin : NSObject <RCTBridgeModule, UIApplicationDelegate, GIDSignInDelegate>
 
 + (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;

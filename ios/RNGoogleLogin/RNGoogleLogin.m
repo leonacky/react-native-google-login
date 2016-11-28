@@ -8,7 +8,7 @@
 
 #import "RNGoogleLogin.h"
 
-@interface RNGoogleLogin() {
+@interface RNGoogleLogin () {
     RCTResponseSenderBlock mCallback;
 }
 
@@ -30,8 +30,8 @@ RCT_EXPORT_MODULE();
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
         NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:filePath];
         [GIDSignIn sharedInstance].delegate = self;
-//        [GIDSignIn sharedInstance].scopes = dict[@"GoogleIOSScopes"];
-        [GIDSignIn sharedInstance].clientID = dict[@"GoogleIOSClientId"];
+        [GIDSignIn sharedInstance].uiDelegate = self;
+        [GIDSignIn sharedInstance].clientID = dict[@"RN_GG_CLIENT_ID"];
     }
     return self;
 }
@@ -50,21 +50,16 @@ RCT_EXPORT_MODULE();
 didSignInForUser:(GIDGoogleUser *)user
      withError:(NSError *)error {
     // Perform any operations on signed in user here.
-    if(error) {
-        NSDictionary *loginData = @{
-                                    @"eventName": @"onError",
-                                    @"code": @(error.code),
-                                    @"data": error.userInfo,
-                                    };
-        mCallback(@[@"error", loginData]);
-        
-    } else {
+    if(user!=Nil) {
+        NSString *photo;
+        if ([GIDSignIn sharedInstance].currentUser.profile.hasImage) {
+            photo = [user.profile imageURLWithDimension:120].absoluteString;
+        }
         NSString *userId = user.userID;                  // For client-side use only!
         NSString *idToken = user.authentication.idToken; // Safe to send to the server
         NSString *fullName = user.profile.name;
         NSString *email = user.profile.email;
-        NSString *photo = @"";
-        // ...
+        //         ...
         NSDictionary *profile = @{
                                   @"id": userId,
                                   @"name": fullName,
@@ -74,8 +69,7 @@ didSignInForUser:(GIDGoogleUser *)user
         
         NSDictionary *credentials = @{
                                       @"userId": userId,
-                                      @"token": fullName,
-                                      @"serverAuthCode": email
+                                      @"token": idToken
                                       };
         
         NSDictionary *loginData = @{
@@ -85,6 +79,12 @@ didSignInForUser:(GIDGoogleUser *)user
                                     };
         mCallback(@[[NSNull null], loginData]);
         
+    } else {
+        NSDictionary *loginData = @{
+                                    @"eventName": @"onError",
+                                    @"code": @(error.code)
+                                    };
+        mCallback(@[@"error", loginData]);
     }
 }
 
@@ -95,6 +95,15 @@ RCT_EXPORT_METHOD(login:(RCTResponseSenderBlock)callback) {
 
 RCT_EXPORT_METHOD(logout) {
     [[GIDSignIn sharedInstance] signOut];
+}
+
+- (void) signIn:(GIDSignIn *)signIn presentViewController:(UIViewController *)viewController {
+    UIViewController *rootViewController = [[[[UIApplication sharedApplication]delegate] window] rootViewController];
+    [rootViewController presentViewController:viewController animated:true completion:nil];
+}
+
+- (void) signIn:(GIDSignIn *)signIn dismissViewController:(UIViewController *)viewController {
+    [viewController dismissViewControllerAnimated:true completion:nil];
 }
 
 @end
