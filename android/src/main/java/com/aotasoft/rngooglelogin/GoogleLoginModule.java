@@ -82,7 +82,7 @@ public class GoogleLoginModule extends ReactContextBaseJavaModule implements Act
 
     @Override
     public String getName() {
-        return "RNGoogleLoginModule";
+        return "RNGoogleLogin";
     }
 
     private void consumeCallback(String type, WritableMap map) {
@@ -144,12 +144,11 @@ public class GoogleLoginModule extends ReactContextBaseJavaModule implements Act
                     map.putMap("profile", profile);
 
                     WritableMap credentials = Arguments.createMap();
-                    credentials.putString("userId", acct.getIdToken());
+                    credentials.putString("userId", acct.getId());
                     if (rn_google_server_key != null && !rn_google_server_key.equals(""))
                         credentials.putString("token", acct.getIdToken());
                     credentials.putString("serverAuthCode", acct.getServerAuthCode());
                     map.putMap("credentials", credentials);
-
                     map.putString("eventName", "onLogin");
                     consumeCallback(CALLBACK_TYPE_SUCCESS, map);
                 } else {

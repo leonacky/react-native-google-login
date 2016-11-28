@@ -3,7 +3,7 @@ import {
 } from 'react-native';
 
 
-const GoogleLoginManager = NativeModules.RNGoogleLoginModule;
+const GoogleLoginManager = NativeModules.RNGoogleLogin;
 
 
 module.exports =  {
