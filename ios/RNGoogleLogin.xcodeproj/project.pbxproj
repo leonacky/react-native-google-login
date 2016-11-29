@@ -9,12 +9,6 @@
 /* Begin PBXBuildFile section */
 		738400301DEBE92600F6E0CE /* RNGoogleLogin.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7384002F1DEBE92600F6E0CE /* RNGoogleLogin.h */; };
 		738400321DEBE92600F6E0CE /* RNGoogleLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 738400311DEBE92600F6E0CE /* RNGoogleLogin.m */; };
-		738400981DEC154100F6E0CE /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 738400901DEC154100F6E0CE /* GoogleAppUtilities.framework */; };
-		738400991DEC154100F6E0CE /* GoogleAuthUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 738400911DEC154100F6E0CE /* GoogleAuthUtilities.framework */; };
-		7384009A1DEC154100F6E0CE /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 738400921DEC154100F6E0CE /* GoogleNetworkingUtilities.framework */; };
-		7384009B1DEC154100F6E0CE /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 738400941DEC154100F6E0CE /* GoogleSignIn.framework */; };
-		7384009C1DEC154100F6E0CE /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 738400951DEC154100F6E0CE /* GoogleSymbolUtilities.framework */; };
-		7384009D1DEC154100F6E0CE /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 738400961DEC154100F6E0CE /* GoogleUtilities.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,13 +28,6 @@
 		7384002C1DEBE92600F6E0CE /* libRNGoogleLogin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNGoogleLogin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7384002F1DEBE92600F6E0CE /* RNGoogleLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNGoogleLogin.h; sourceTree = "<group>"; };
 		738400311DEBE92600F6E0CE /* RNGoogleLogin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNGoogleLogin.m; sourceTree = "<group>"; };
-		738400901DEC154100F6E0CE /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppUtilities.framework; sourceTree = "<group>"; };
-		738400911DEC154100F6E0CE /* GoogleAuthUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAuthUtilities.framework; sourceTree = "<group>"; };
-		738400921DEC154100F6E0CE /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
-		738400931DEC154100F6E0CE /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
-		738400941DEC154100F6E0CE /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
-		738400951DEC154100F6E0CE /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		738400961DEC154100F6E0CE /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,12 +35,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7384009D1DEC154100F6E0CE /* GoogleUtilities.framework in Frameworks */,
-				738400991DEC154100F6E0CE /* GoogleAuthUtilities.framework in Frameworks */,
-				7384009A1DEC154100F6E0CE /* GoogleNetworkingUtilities.framework in Frameworks */,
-				7384009C1DEC154100F6E0CE /* GoogleSymbolUtilities.framework in Frameworks */,
-				738400981DEC154100F6E0CE /* GoogleAppUtilities.framework in Frameworks */,
-				7384009B1DEC154100F6E0CE /* GoogleSignIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +44,6 @@
 		738400231DEBE92600F6E0CE = {
 			isa = PBXGroup;
 			children = (
-				738400971DEC154100F6E0CE /* GoogleSdk */,
 				7384002E1DEBE92600F6E0CE /* RNGoogleLogin */,
 				7384002D1DEBE92600F6E0CE /* Products */,
 			);
@@ -84,20 +64,6 @@
 				738400311DEBE92600F6E0CE /* RNGoogleLogin.m */,
 			);
 			path = RNGoogleLogin;
-			sourceTree = "<group>";
-		};
-		738400971DEC154100F6E0CE /* GoogleSdk */ = {
-			isa = PBXGroup;
-			children = (
-				738400901DEC154100F6E0CE /* GoogleAppUtilities.framework */,
-				738400911DEC154100F6E0CE /* GoogleAuthUtilities.framework */,
-				738400921DEC154100F6E0CE /* GoogleNetworkingUtilities.framework */,
-				738400931DEC154100F6E0CE /* GoogleSignIn.bundle */,
-				738400941DEC154100F6E0CE /* GoogleSignIn.framework */,
-				738400951DEC154100F6E0CE /* GoogleSymbolUtilities.framework */,
-				738400961DEC154100F6E0CE /* GoogleUtilities.framework */,
-			);
-			path = GoogleSdk;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
