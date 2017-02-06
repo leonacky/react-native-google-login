@@ -32,6 +32,14 @@ RCT_EXPORT_MODULE();
         [GIDSignIn sharedInstance].delegate = self;
         [GIDSignIn sharedInstance].uiDelegate = self;
         [GIDSignIn sharedInstance].clientID = dict[@"RN_GG_CLIENT_ID"];
+        if(dict[@"RN_GG_SERVER_CLIENT_ID"])
+            [GIDSignIn sharedInstance].serverClientID = dict[@"RN_GG_SERVER_CLIENT_ID"];
+        [GIDSignIn sharedInstance].scopes = @[
+            @"https://www.googleapis.com/auth/contacts.readonly",
+            @"https://www.googleapis.com/auth/userinfo.profile",
+            @"https://www.googleapis.com/auth/userinfo.email",
+            @"https://www.googleapis.com/auth/youtube.upload"
+            ];
     }
     return self;
 }
